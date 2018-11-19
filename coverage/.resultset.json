@@ -1,0 +1,53 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/kirillzabrodin/Projects/bookmark_manager_app/spec/bookmark_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/kirillzabrodin/Projects/bookmark_manager_app/lib/bookmark_list.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/kirillzabrodin/Projects/bookmark_manager_app/spec/features/bookmark_view_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/kirillzabrodin/Projects/bookmark_manager_app/spec/features/index_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1542638983
+  }
+}

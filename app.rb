@@ -1,9 +1,18 @@
 require 'sinatra/base'
 
+# here is a comment for rubocop
 class BookmarkManager < Sinatra::Base
 
-  get '/' do
+  before do
+    @bookmarks = BookmarkList.instance
+  end
 
+  get '/' do
+    erb(:index)
+  end
+
+  get '/bookmarks' do
+    erb(:bookmarks)
   end
 
   run! if app_file == $0
