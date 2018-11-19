@@ -1,7 +1,6 @@
 require 'sinatra/base'
 require './lib/bookmark_list'
 
-# here is a comment for rubocop
 class BookmarkManager < Sinatra::Base
 
   before do
