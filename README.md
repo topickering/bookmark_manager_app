@@ -2,6 +2,10 @@ As a user,
 I want to see a list of bookmarks
 So that I am able to know what I need to look at today
 
+As a user
+I want to be able to add to a record of bookmarks
+So that I am able to return to websites that I have enjoyed
+
 
 ![Screenshot](diagram.png)
 
