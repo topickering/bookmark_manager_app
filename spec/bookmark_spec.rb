@@ -1,10 +1,14 @@
-require 'bookmark_list'
+require 'bookmark'
 
-describe BookmarkList do
+describe Bookmark do
 
-  describe "#view" do
-    it "shows all bookmarks" do
-      expect(subject.view).to eq "A bookmarks list"
+  describe '.all' do
+    it 'returns all bookmarks' do
+      bookmarks = Bookmark.all
+
+      expect(bookmarks).to include("http://www.makersacademy.com")
+      expect(bookmarks).to include("http://www.destroyallsoftware.com")
+      expect(bookmarks).to include("http://www.google.com")
     end
   end
 
