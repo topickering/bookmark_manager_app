@@ -8,12 +8,4 @@ class Bookmark
     result.map { |bookmark| bookmark['url'] }
   end
 
-  def self.instance
-    @bookmarks
-  end
-
-  def self.create
-    @bookmarks = Bookmark.new
-  end
-
 end
