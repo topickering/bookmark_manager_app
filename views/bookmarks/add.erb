@@ -1,6 +1,13 @@
 <h3>Add a bookmark</h3>
-<p>To add a bookmark, enter the url below:</p>
+<p>To add a bookmark:</p>
 <form action='/new_bookmark' method='post'>
+  <label for='new_bookmark'>
+    enter the url:
   <input type='text' name='new_bookmark'>
+  </label>
+  <label for='title'>
+    enter the title:
+    <input type='text' name='title'>
+    </label>
   <input type="submit" value="Add bookmark">
 </form>

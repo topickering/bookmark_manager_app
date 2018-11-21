@@ -6,7 +6,8 @@ feature "Add bookmarks" do
   scenario "confirmation message after adding bookmark" do
     visit '/bookmark_add'
     fill_in "new_bookmark", with: "www.testwebsite.com"
+    fill_in "title", with: "test title"
     click_button 'Add bookmark'
-    expect(page).to have_content 'www.testwebsite.com'
+    expect(page).to have_content 'test title'
   end
 end
