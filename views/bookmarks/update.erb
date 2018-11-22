@@ -2,8 +2,14 @@
 <p>Current url = <%= @bookmark.url %></p>
 
 <form action='/bookmarks_updated/<%=@bookmark.id%>' method='post'>
-  <input type='hidden' name='_method' value='put'>
+  <input type='hidden' name='_method' value='patch'>
+  <label for='new_title'>
+    Enter new title:
   <input type='text' name='new_title'/>
+  </label>
+  <label for='new_url'>
+    Enter new URL:
   <input type='text' name='new_url'/>
-  <input type='submit' value='Update'>
+  </label>
+  <p><input type='submit' value='Update'></p>
 </form>
