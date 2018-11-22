@@ -26,4 +26,12 @@ describe Bookmark do
     end
   end
 
+  describe '#delete' do
+    it 'deletes a bookmark' do
+      Bookmark.create(url: 'test_url', title: 'test title')
+      Bookmark.delete(title: 'test title')
+      expect(Bookmark.all).to be_empty
+    end
+  end
+
 end
