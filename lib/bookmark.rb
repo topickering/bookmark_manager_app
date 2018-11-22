@@ -43,4 +43,34 @@ class Bookmark
     connection.exec("DELETE FROM bookmarks WHERE id = '#{id}'")
   end
 
+  def self.search(id:)
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+    else
+      connection = PG.connect(dbname: 'bookmark_manager')
+    end
+
+    result = connection.exec("SELECT * FROM bookmarks WHERE id = #{id};")
+    result.map do |bookmark|
+      Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
+    end
+  end
+
+  def self.update(id:, title:, url:)
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+    else
+      connection = PG.connect(dbname: 'bookmark_manager')
+    end
+
+    if title == ""
+      connection.exec("UPDATE bookmarks SET url = '#{url}' WHERE id = #{id}")
+    elsif url == ""
+      connection.exec("UPDATE bookmarks SET title = '#{title}' WHERE id = #{id}")
+    else
+      connection.exec("UPDATE bookmarks SET title = '#{title}', url = '#{url}' WHERE id = #{id}")
+    end
+
+  end
+
 end

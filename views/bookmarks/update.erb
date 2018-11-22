@@ -1,0 +1,9 @@
+<p>Current title = <%= @bookmark.title %></p>
+<p>Current url = <%= @bookmark.url %></p>
+
+<form action='/bookmarks_updated/<%=@bookmark.id%>' method='post'>
+  <input type='hidden' name='_method' value='put'>
+  <input type='text' name='new_title'/>
+  <input type='text' name='new_url'/>
+  <input type='submit' value='Update'>
+</form>

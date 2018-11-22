@@ -10,6 +10,10 @@ As a user
 I want to be able to delete a bookmark
 So that I can manage my list
 
+As a user
+I want to be able to update a bookmark
+So that I can keep my list up-to-date
+
 
 ![Screenshot](diagram.png)
 
