@@ -6,6 +6,10 @@ As a user
 I want to be able to add to a record of bookmarks
 So that I am able to return to websites that I have enjoyed
 
+As a user
+I want to be able to delete a bookmark
+So that I can manage my list
+
 
 ![Screenshot](diagram.png)
 
