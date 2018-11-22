@@ -5,7 +5,7 @@ feature 'Delete bookmark' do
     connection.exec("INSERT INTO bookmarks VALUES(1, 'http://www.makersacademy.com', 'makers') RETURNING id, title, url;")
 
     visit '/bookmarks_list'
-    expect(page).to have_selector("input[type=submit][value='makers']")
+    expect(page).to have_selector("input[type=submit][value='Delete']")
   end
   scenario 'user deletes a bookmark' do
     connection = PG.connect(dbname: 'bookmark_manager_test')
@@ -16,7 +16,7 @@ feature 'Delete bookmark' do
 
     visit('/bookmarks_list')
 
-    click_button 'makers'
+    first('.bookmark').click_button 'Delete'
 
     expect(page).not_to have_content 'makers'
   end
